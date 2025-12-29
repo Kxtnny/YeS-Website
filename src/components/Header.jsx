@@ -1,8 +1,24 @@
+import { useState, useEffect } from 'react'
 import logo from '../assets/yes-logo.png'
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('about');
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setIsScrolled(window.scrollY > heroBottom);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo-container">
         <img src={logo} alt="YeS Logo" className="logo" />
         <h1 className="site-title">Young Entrepreneurs<br/>of Singapore</h1>
