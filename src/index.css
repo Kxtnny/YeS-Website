@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ebe9e1;
+  min-height: 200vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #ebe9e1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.site-title {
+  font-family: 'Headland One', serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #ab2e2e;
+  text-decoration: underline;
+}
+
+.nav-separator {
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 20px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .site-title {
+    font-size: 20px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+
+  .nav-list {
+    gap: 8px;
+    font-size: 13px;
+  }
+}
+
+/* Hero Section Styles */
+.hero-section {
+  text-align: center;
+  padding: 80px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 120px;
+}
+
+.hero-title {
+  font-family: 'Headland One', serif;
+  font-size: 64px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 40px 0;
+  color: #000;
+}
+
+.underline-text {
+  color: #ab2e2e;
+  text-decoration: underline;
+  text-decoration-color: #ab2e2e;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 8px;
+}
+
+.hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  padding-top: 30px;
+  line-height: 1.8;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Hero Section Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 30px;
+    scroll-margin-top: 180px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+}
+
+/*Partners Section Styles*/
