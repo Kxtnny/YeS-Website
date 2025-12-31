@@ -14,7 +14,7 @@ export default function EventSection({data}){
 
     return(
         <section id="events" className="event-section">
-            <h2 className="section-title">Our Recent Events</h2>
+            <h2 className="section-title animate-scroll">Our Recent Events</h2>
             <div className="events-scroll-container">
                 {eventElements}
             </div>

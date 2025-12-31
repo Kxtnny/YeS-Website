@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return (
-        <section id="about" className="hero-section">
+        <section id="about" className="hero-section animate-scroll">
             <h1 className="hero-title">
                 Turn your wild <br /> <span className="underline-text">ideas</span> into <span className="underline-text">ventures.</span>
             </h1>
