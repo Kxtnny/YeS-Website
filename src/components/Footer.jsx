@@ -1,3 +1,5 @@
+import logo from '../assets/yes-logo.png';
+
 export default function Footer(){
     return (
         <footer id="join" className="footer">
@@ -26,7 +28,7 @@ export default function Footer(){
                     {/* YeS Info */}
                     <div className="footer-column">
                         <div className="footer-logo-section">
-                            <img src="/src/assets/yes-logo.png" alt="YeS Logo" className="footer-logo" />
+                            <img src={logo} alt="YeS Logo" className="footer-logo" />
                             <h4 className="footer-logo-text">YeS</h4>
                         </div>
                         <p className="footer-description">
