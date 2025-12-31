@@ -173,10 +173,35 @@ body {
 
 .underline-text {
   color: #ab2e2e;
-  text-decoration: underline;
-  text-decoration-color: #ab2e2e;
-  text-decoration-thickness: 5px;
-  text-underline-offset: 8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 5px;
+  background-color: #ab2e2e;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawUnderline 1s ease-out forwards;
+}
+
+.underline-text:nth-of-type(1)::after {
+  animation-delay: 0.5s;
+}
+
+.underline-text:nth-of-type(2)::after {
+  animation-delay: 0.8s;
+}
+
+@keyframes drawUnderline {
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .hero-description {
