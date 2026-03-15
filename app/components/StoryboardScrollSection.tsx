@@ -1,12 +1,20 @@
 "use client";
 
 import { useRef, ReactNode } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  MotionValue,
+  useMotionTemplate,
+} from "framer-motion";
 
 const PAGE_HEIGHT_VH = 100;
 
 type Props = {
+  id?: string;
   pages: ReactNode[];
+  pageIds?: Array<string | undefined>;
 };
 
 function OverlayLayer({
@@ -20,20 +28,16 @@ function OverlayLayer({
   scrollYProgress: MotionValue<number>;
   children: ReactNode;
 }) {
-  const y = useTransform(scrollYProgress, (p) => {
-    const h = typeof window !== "undefined" ? window.innerHeight : 900;
-    // scrollYProgress 0→1 over (count-1)*100vh of section scroll.
-    // Each overlay gets one full viewport of scroll:
-    // page 2 => 0..100vh, page 3 => 100..200vh, etc.
-    const sectionScrollRangePx = (count - 1) * PAGE_HEIGHT_VH * (h / 100);
-    const transitionStartPx = (pageIndex - 1) * PAGE_HEIGHT_VH * (h / 100);
-    const transitionEndPx = pageIndex * PAGE_HEIGHT_VH * (h / 100);
-    const startP = transitionStartPx / sectionScrollRangePx;
-    const endP = transitionEndPx / sectionScrollRangePx;
-    if (p <= startP) return h;
-    if (p >= endP) return 0;
-    return h - ((p - startP) / (endP - startP)) * h;
-  });
+  const segmentCount = Math.max(count - 1, 1);
+  const startProgress = (pageIndex - 1) / segmentCount;
+  const endProgress = pageIndex / segmentCount;
+  const translateY = useTransform(
+    scrollYProgress,
+    [startProgress, endProgress],
+    [100, 0],
+    { clamp: true }
+  );
+  const y = useMotionTemplate`${translateY}vh`;
 
   return (
     <motion.div
@@ -45,7 +49,7 @@ function OverlayLayer({
   );
 }
 
-export function StoryboardScrollSection({ pages }: Props) {
+export function StoryboardScrollSection({ id, pages, pageIds }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const count = pages.length;
 
@@ -56,10 +60,22 @@ export function StoryboardScrollSection({ pages }: Props) {
 
   return (
     <div
+      id={id}
       ref={sectionRef}
       className="relative w-full"
       style={{ height: `${count * PAGE_HEIGHT_VH}vh` }}
     >
+      {pageIds?.map((pageId, index) =>
+        pageId ? (
+          <div
+            key={pageId}
+            id={pageId}
+            aria-hidden="true"
+            className="absolute left-0 h-px w-px pointer-events-none"
+            style={{ top: `${index * PAGE_HEIGHT_VH}vh` }}
+          />
+        ) : null
+      )}
       <div
         className="sticky top-0 left-0 w-full overflow-hidden"
         style={{ height: "100vh" }}
