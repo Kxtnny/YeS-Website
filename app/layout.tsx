@@ -15,7 +15,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "YeS",
-  description: "Young Entrepreneur of Singapore",
+  description: "Young Entrepreneurs of Singapore",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "YeS - Young Entrepreneurs of Singapore",
+    description: "Young Entrepreneurs of Singapore",
+    images: [{ url: "/yes-logo.png", alt: "Young Entrepreneurs of Singapore" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "YeS – Young Entrepreneurs of Singapore",
+    description: "Young Entrepreneurs of Singapore",
+    images: ["/yes-logo.png"],
+  },
 };
 
 export default function RootLayout({
