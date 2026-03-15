@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef, ReactNode } from "react";
+import { useRef, ReactNode, useState } from "react";
 import {
   motion,
   useScroll,
   useTransform,
   MotionValue,
   useMotionTemplate,
+  useMotionValueEvent,
 } from "framer-motion";
 
 const PAGE_HEIGHT_VH = 100;
@@ -52,11 +53,28 @@ function OverlayLayer({
 export function StoryboardScrollSection({ id, pages, pageIds }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const count = pages.length;
+  const segmentCount = Math.max(count - 1, 1);
+  const [activePageIndex, setActivePageIndex] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (count <= 1) return;
+
+    const nextActiveIndex = Math.min(
+      Math.floor(latest * segmentCount),
+      count - 2
+    );
+
+    setActivePageIndex((current) =>
+      current === nextActiveIndex ? current : nextActiveIndex
+    );
+  });
+
+  const overlayPageIndex = Math.min(activePageIndex + 1, count - 1);
 
   return (
     <div
@@ -80,26 +98,24 @@ export function StoryboardScrollSection({ id, pages, pageIds }: Props) {
         className="sticky top-0 left-0 w-full overflow-hidden"
         style={{ height: "100vh" }}
       >
-        {pages.map((page, i) =>
-          i === 0 ? (
-            <div
-              key={i}
-              className="absolute inset-0 z-0 w-full"
-              style={{ height: "100vh" }}
-            >
-              {page}
-            </div>
-          ) : (
-            <OverlayLayer
-              key={i}
-              pageIndex={i}
-              count={count}
-              scrollYProgress={scrollYProgress}
-            >
-              {page}
-            </OverlayLayer>
-          )
-        )}
+        <div
+          key={activePageIndex}
+          className="absolute inset-0 z-0 w-full"
+          style={{ height: "100vh" }}
+        >
+          {pages[activePageIndex]}
+        </div>
+
+        {count > 1 ? (
+          <OverlayLayer
+            key={overlayPageIndex}
+            pageIndex={overlayPageIndex}
+            count={count}
+            scrollYProgress={scrollYProgress}
+          >
+            {pages[overlayPageIndex]}
+          </OverlayLayer>
+        ) : null}
       </div>
     </div>
   );
