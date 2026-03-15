@@ -19,16 +19,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "YeS",
   description: "Young Entrepreneurs of Singapore",
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    type: "website",
-    url: "/",
-    siteName: "YeS",
     title: "YeS - Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
     images: [{ url: "/yes-logo.png", alt: "Young Entrepreneurs of Singapore" }],
