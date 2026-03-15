@@ -10,7 +10,7 @@ export function StoryboardScrollSection({ id, pages, pageIds }: Props) {
   return (
     <div id={id} className="relative">
       {pages.map((page, i) => (
-        <div key={i} className="sticky top-0 h-screen w-full">
+        <div key={i} className="sticky top-0 h-svh w-full">
           {pageIds?.[i] ? (
             <div
               id={pageIds[i]}
