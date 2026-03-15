@@ -10,6 +10,7 @@
   --secondary: #121212;
   --secondary-foreground: #ffffff;
   --grid-cell: 64px;
+  --width-ui: 1920px;
 }
 
 @media (min-width: 768px) {
@@ -40,8 +41,18 @@
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --grid-cell: var(--grid-cell);
+  --width-ui: 1920px;
+  --max-width-ui: 1920px;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@utility max-w-ui {
+  max-width: var(--width-ui);
+}
+
+@utility w-ui {
+  width: var(--width-ui);
 }
 
 body {
