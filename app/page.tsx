@@ -14,7 +14,7 @@ const PARTNERS = [
 export function DontKnowWhereToStartStoryBoard() {
   return (
     <div className="w-full h-svh bg-secondary flex flex-col items-center">
-      <div className="flex flex-row max-w-ui px-16 w-full h-full">
+      <div className="flex flex-col md:flex-row max-w-ui px-8 md:px-12 lg:px-16 w-full h-full">
         <div className="flex-1 h-full flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center">
           <div className="w-full xl:w-2/3 flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-left text-secondary-foreground">
@@ -106,8 +106,8 @@ export function DontKnowWhereToStartStoryBoard() {
 export function WhyYeSExistStoryBoard() {
   return (
     <div className="w-full h-svh bg-primary flex flex-col items-center">
-      <div className="relative flex flex-row max-w-ui px-16 w-full h-full">
-        <div className="absolute -top-1/5 left-0 w-2/3">
+      <div className="relative flex flex-col lg:flex-row max-w-ui px-8 md:px-12 lg:px-16 w-full h-full">
+        <div className="absolute -top-20 md:-top-1/5 left-0 w-full lg:w-2/3">
           <svg
             className="w-full h-full"
             viewBox="0 0 1078 1078"
@@ -390,7 +390,7 @@ export function WhyYeSExistStoryBoard() {
 export function SparkCultureStoryBoard() {
   return (
     <div className="w-full h-svh bg-primary-light flex flex-col items-center">
-      <div className="flex flex-col max-w-ui px-16 w-full h-full items-center justify-center py-12">
+      <div className="flex flex-col max-w-ui px-8 md:px-12 lg:px-16 w-full h-full items-center justify-center py-12">
         <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center flex-1">
           <div className="w-full flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-primary-light-foreground">
@@ -576,10 +576,10 @@ export function SparkCultureStoryBoard() {
 function ReadyToKickOffStoryboard() {
   return (
     <div className="w-full h-svh bg-primary flex flex-col items-center">
-      <div className="flex flex-col lg:flex-row max-w-ui px-16 py-12 w-full h-full">
+      <div className="flex flex-col lg:flex-row max-w-ui px-8 md:px-12 lg:px-16 py-12 w-full h-full">
         <div className="flex-2 h-full flex flex-col gap-4 md:gap-6 lg:gap-12 justify-center">
           <div className="w-full flex flex-col gap-6 md:gap-12 lg:gap-16 justify-center">
-            <h2 className="uppercase text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-left text-primary-foreground">
+            <h2 className="uppercase text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-left text-primary-foreground">
               Ready to <span className="text-primary-light">Kickoff</span>?
             </h2>
             <div className="flex flex-row items-center gap-4">
@@ -710,8 +710,8 @@ export default function Home() {
           backgroundSize: "var(--grid-cell) var(--grid-cell)",
         }}
       >
-        <div className="relative max-w-ui w-full flex flex-col items-center gap-12 py-96">
-          <div className="absolute top-0 left-0 w-full h-full py-16 md:py-20 lg:py-24">
+        <div className="relative max-w-ui w-full flex flex-col items-center gap-12 py-40 md:py-72 lg:py-96">
+          <div className="absolute top-0 left-0 w-full h-full py-8 md:py-16 lg:py-24">
             <svg
               className="w-full h-full"
               viewBox="0 0 358 491"
@@ -743,7 +743,7 @@ export default function Home() {
 
           <div className="relative z-10 flex flex-col items-center gap-16">
             <div className="flex flex-col items-center gap-8">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-center">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center">
                 Turn your wild
                 <br />
                 <span className="text-primary">ideas</span> into{" "}
