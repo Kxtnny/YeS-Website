@@ -28,9 +28,7 @@ export function DontKnowWhereToStartStoryBoard() {
           </div>
         </div>
         <div className="flex-1 pb-8">
-          <svg
-            // width="515"
-            // height="773"
+          {/* <svg
             className="w-full h-full"
             viewBox="0 0 515 773"
             fill="none"
@@ -96,7 +94,7 @@ export function DontKnowWhereToStartStoryBoard() {
               d="M237.472 142.432C236.9 144.785 236.688 145.804 237.472 148.158C242.538 151.18 249.568 154.573 255.578 153.705C256.212 153.528 256.846 153.351 257.5 153.168C257.5 151.515 257.5 149.862 257.5 148.158C251.533 144.27 244.631 141.87 237.472 142.432Z"
               fill="white"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
     </div>
@@ -149,7 +147,7 @@ export function WhyYeSExistStoryBoard() {
           </div>
         </div>
         <div className="flex-1">
-          <svg
+          {/* <svg
             className="w-full h-full"
             viewBox="0 0 966 644"
             fill="none"
@@ -380,7 +378,7 @@ export function WhyYeSExistStoryBoard() {
               d="M433.806 210.194C434.691 210.194 435.577 210.194 436.489 210.194C436.489 211.08 436.489 211.965 436.489 212.878C435.603 212.583 434.718 212.287 433.806 211.983C433.806 211.393 433.806 210.803 433.806 210.194Z"
               fill="#E1D6D6"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
     </div>
@@ -409,7 +407,7 @@ export function SparkCultureStoryBoard() {
           className="min-h-0 w-full flex-3"
           // style={{ maxHeight: "calc(100vh - 200px)" }}
         >
-          <svg
+          {/* <svg
             className="w-full h-full"
             viewBox="0 0 783 561"
             fill="none"
@@ -566,7 +564,7 @@ export function SparkCultureStoryBoard() {
                 <rect width="783" height="561" fill="white" />
               </clipPath>
             </defs>
-          </svg>
+          </svg> */}
         </div>
       </div>
     </div>
@@ -599,7 +597,7 @@ function ReadyToKickOffStoryboard() {
           </div>
         </div>
         <div className="flex-3 xl:flex-5 flex flex-col justify-end items-end">
-          <svg
+          {/* <svg
             className="w-full aspect-1353/934"
             viewBox="0 0 1353 934"
             fill="none"
@@ -693,7 +691,7 @@ function ReadyToKickOffStoryboard() {
               d="M544.018 460.92C542.521 467.452 541.816 473.485 537.42 478.017C529.488 472.749 528.648 454.974 536.506 451.59C544.016 448.355 543.981 455.022 544.018 460.92Z"
               fill="#E1D6D6"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
     </div>
