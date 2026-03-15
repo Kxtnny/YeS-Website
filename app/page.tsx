@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { StoryboardScrollSection } from "./components/StoryboardScrollSection";
 
 const PARTNERS = [
   { name: "NTU ES", image: "/partners/ntu-es.png" },
@@ -628,9 +629,13 @@ export default function Home() {
         </div>
       </div>
 
-      <DontKnowWhereToStartStoryBoard />
-      <WhyYeSExistStoryBoard />
-      <SparkCultureStoryBoard />
+      <StoryboardScrollSection
+        pages={[
+          <DontKnowWhereToStartStoryBoard key="1" />,
+          <WhyYeSExistStoryBoard key="2" />,
+          <SparkCultureStoryBoard key="3" />,
+        ]}
+      />
     </div>
   );
 }
