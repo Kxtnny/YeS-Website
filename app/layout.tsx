@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./components/Header";
 import "./globals.css";
 
+const siteUrl = "https://joinyes.net";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,12 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "YeS",
   description: "Young Entrepreneurs of Singapore",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "YeS",
     title: "YeS - Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
     images: [{ url: "/yes-logo.png", alt: "Young Entrepreneurs of Singapore" }],
