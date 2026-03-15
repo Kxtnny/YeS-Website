@@ -13,7 +13,7 @@ const PARTNERS = [
 
 export function DontKnowWhereToStartStoryBoard() {
   return (
-    <div className="w-full h-svh bg-secondary flex flex-col items-center">
+    <div className="w-full h-screen bg-secondary flex flex-col items-center">
       <div className="flex flex-col md:flex-row max-w-ui px-8 md:px-12 lg:px-16 w-full h-full">
         <div className="flex-1 h-full flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center">
           <div className="w-full xl:w-2/3 flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center">
@@ -27,7 +27,7 @@ export function DontKnowWhereToStartStoryBoard() {
             </p>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 pb-8">
           <svg
             // width="515"
             // height="773"
@@ -105,7 +105,7 @@ export function DontKnowWhereToStartStoryBoard() {
 
 export function WhyYeSExistStoryBoard() {
   return (
-    <div className="w-full h-svh bg-primary flex flex-col items-center">
+    <div className="w-full h-screen bg-primary flex flex-col items-center">
       <div className="relative flex flex-col lg:flex-row max-w-ui px-8 md:px-12 lg:px-16 w-full h-full">
         <div className="absolute -top-20 md:-top-1/5 left-0 w-full lg:w-2/3">
           <svg
@@ -389,7 +389,7 @@ export function WhyYeSExistStoryBoard() {
 
 export function SparkCultureStoryBoard() {
   return (
-    <div className="w-full h-svh bg-primary-light flex flex-col items-center">
+    <div className="w-full h-screen bg-primary-light flex flex-col items-center">
       <div className="flex flex-col max-w-ui px-8 md:px-12 lg:px-16 w-full h-full items-center justify-center py-12">
         <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center flex-1">
           <div className="w-full flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center">
@@ -407,7 +407,7 @@ export function SparkCultureStoryBoard() {
         </div>
         <div
           className="min-h-0 w-full flex-3"
-          // style={{ maxHeight: "calc(100svh - 200px)" }}
+          // style={{ maxHeight: "calc(100vh - 200px)" }}
         >
           <svg
             className="w-full h-full"
@@ -575,7 +575,7 @@ export function SparkCultureStoryBoard() {
 
 function ReadyToKickOffStoryboard() {
   return (
-    <div className="w-full h-svh bg-primary flex flex-col items-center">
+    <div className="w-full h-screen bg-primary flex flex-col items-center">
       <div className="flex flex-col lg:flex-row max-w-ui px-8 md:px-12 lg:px-16 py-12 w-full h-full">
         <div className="flex-2 h-full flex flex-col gap-4 md:gap-6 lg:gap-12 justify-center">
           <div className="w-full flex flex-col gap-6 md:gap-12 lg:gap-16 justify-center">

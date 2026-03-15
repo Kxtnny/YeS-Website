@@ -24,7 +24,7 @@ const EVENTS: Event[] = [
 
 export default function EventsPage() {
   return (
-    <main className="min-h-[calc(100svh-var(--header-height))] bg-background flex flex-col items-center">
+    <main className="min-h-[calc(100vh-var(--header-height))] bg-background flex flex-col items-center">
       <div className="flex w-full max-w-ui flex-col gap-10 px-6 py-10 md:px-10 md:py-12 lg:gap-12 lg:px-16">
         <div className="flex flex-col gap-4">
           <p className="text-sm md:text-base lg:text-lg font-semibold uppercase tracking-[0.2em] text-primary">
