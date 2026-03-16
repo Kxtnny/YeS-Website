@@ -899,7 +899,7 @@ function ReadyToKickOffStoryboard() {
                 </a>
               </button>
               <button className="w-36 md:w-48 lg:w-56 bg-secondary text-secondary-foreground px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl">
-                <Link href="/">Partner Up!</Link>
+                <Link href="https://tally.so/r/9qlQWG">Partner Up!</Link>
               </button>
             </div>
           </div>
