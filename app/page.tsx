@@ -884,7 +884,9 @@ function ReadyToKickOffStoryboard() {
                 </a>
               </button>
               <button className="w-28 md:w-40 lg:w-44 xl:w-48 bg-secondary text-secondary-foreground border-2 border-primary px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl">
-                <Link href="/">Partner with us</Link>
+                <a href="https://tally.so/r/9qlQWG" target="_blank" rel="noopener noreferrer">
+                  Partner with us
+                </a>
               </button>
             </div>
             {/* Without landscape */}
@@ -899,7 +901,9 @@ function ReadyToKickOffStoryboard() {
                 </a>
               </button>
               <button className="w-36 md:w-48 lg:w-56 bg-secondary text-secondary-foreground px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl">
-                <Link href="https://tally.so/r/9qlQWG">Partner Up!</Link>
+                <a href="https://tally.so/r/9qlQWG" target="_blank" rel="noopener noreferrer">
+                  Partner Up!
+                </a>
               </button>
             </div>
           </div>
