@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "YeS - Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
+    type: "website",
     images: [{ url: "/yes-logo.png", 
       width: 960,
       height: 540,
