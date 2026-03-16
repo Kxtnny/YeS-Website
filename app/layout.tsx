@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     description: "Young Entrepreneurs of Singapore",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/yes-banner.jpg", 
-      width: 1280,
-      height: 541,
+    images: [{ url: "/yes-banner.png", 
+      width: 1200,
+      height: 630,
       alt: "Young Entrepreneurs of Singapore" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "YeS – Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
-    images: "/yes-banner.jpg",
+    images: "/yes-banner.png",
   },
 };
 
