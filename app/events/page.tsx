@@ -8,7 +8,21 @@ type Event = {
   link: string | null;
   date: string;
   location: string;
+  tag: "upcoming" | "completed";
 };
+
+// Helper function to determine event status for future use
+function getEventTag(dateString: string): "upcoming" | "completed" {
+  const eventDate = new Date(dateString);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return eventDate >= today ? "upcoming" : "completed";
+}
+
+// Helper function to parse date for sorting
+function parseDate(dateString: string): Date {
+  return new Date(dateString);
+}
 
 const EVENTS: Event[] = [
   {
@@ -19,6 +33,7 @@ const EVENTS: Event[] = [
     link: "https://www.linkedin.com/posts/shrujan-beesetty_do-you-have-a-great-idea-but-somehow-still-ugcPost-7405232419722870785-rmjL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUoomsBTNPyF7QOnjE-wjvRk1eQrzC8gus",
     date: "8 Jan 2026",
     location: "Open Sourced Cafe, Singapore",
+    tag: "completed",
   },
   {
     image: "/events/student-founder-pitch-night.jpg",
@@ -28,6 +43,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/6kh14jwj",
     date: "16 Jan 2026",
     location: "BLOCK71, Singapore",
+    tag: "completed",
   },
   {
     image: "/events/youth-builder-mixer.jpg",
@@ -36,8 +52,7 @@ const EVENTS: Event[] = [
       "Youth Builders Mixer is an invite-only dinner for youth founders, builders, and early-stage entrepreneurs to slow down, meet each other, and have real conversations.​This isn’t a networking event. It’s a shared table for people building things, from student-led startups and creators to early founders across Singapore’s youth ecosystem. No pitches, no panels, just good food, board games, and honest conversations with people who are actually shipping.",
     link: "https://luma.com/5wg9q462",
     date: "8 Feb 2026",
-    location: "Monk's Brew Club, Singapore",
-  },
+    location: "Monk's Brew Club, Singapore",    tag: "completed",  },
   {
     image: "/events/entrepreneurs-connect.jpg",
     title: "Entrepreners Connect",
@@ -46,6 +61,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/8rqm5tue",
     date: "26 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
+    tag: "upcoming",
   },
   {
     image: "/events/creating-effective-teams.jpg",
@@ -55,6 +71,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/et8qvin9",
     date: "30 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
+    tag: "upcoming",
   },
   {
     image: "/events/creating-effective-teams.jpg",
@@ -64,8 +81,9 @@ const EVENTS: Event[] = [
     link: "https://luma.com/bck4uh17",
     date: "7 April 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
+    tag: "upcoming",
   },
-];
+].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
 
 export default function EventsPage() {
   return (
@@ -101,9 +119,20 @@ export default function EventsPage() {
 
               <div className="flex flex-1 flex-col gap-6 p-6 md:p-8 lg:p-10">
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-                    {event.title}
-                  </h2>
+                  <div className="flex items-start justify-between gap-4">
+                    <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                      {event.title}
+                    </h2>
+                    <span
+                      className={`inline-flex shrink-0 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${
+                        event.tag === "upcoming"
+                          ? "bg-blue-100 text-blue-800"
+                          : "bg-gray-100 text-gray-800"
+                      }`}
+                    >
+                      {event.tag}
+                    </span>
+                  </div>
                   <p className="text-base leading-7 text-foreground/80 md:text-lg">
                     {event.description}
                   </p>
