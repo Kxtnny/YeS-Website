@@ -748,7 +748,7 @@ export default function Home() {
                 <span className="hero-underline text-primary">ventures</span>.
               </h1>
               <p className="hero-subtitle-reveal text-center text-2xl md:text-3xl lg:text-4xl">
-                With Young Entrepreuners of Singapore
+                With Young Entrepreneurs of Singapore
               </p>
             </div>
             <div className="flex flex-row items-center gap-4">
