@@ -24,7 +24,7 @@ function parseDate(dateString: string): Date {
   return new Date(dateString);
 }
 
-const EVENTS: Event[] = [
+const EVENTS = [
   {
     image: "/events/founder-centric-mixer.jpg",
     title: "First Founder-Centric Mixer",
@@ -33,7 +33,7 @@ const EVENTS: Event[] = [
     link: "https://www.linkedin.com/posts/shrujan-beesetty_do-you-have-a-great-idea-but-somehow-still-ugcPost-7405232419722870785-rmjL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUoomsBTNPyF7QOnjE-wjvRk1eQrzC8gus",
     date: "8 Jan 2026",
     location: "Open Sourced Cafe, Singapore",
-    tag: "completed",
+    tag: "completed" as const,
   },
   {
     image: "/events/student-founder-pitch-night.jpg",
@@ -43,7 +43,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/6kh14jwj",
     date: "16 Jan 2026",
     location: "BLOCK71, Singapore",
-    tag: "completed",
+    tag: "completed" as const,
   },
   {
     image: "/events/youth-builder-mixer.jpg",
@@ -52,7 +52,9 @@ const EVENTS: Event[] = [
       "Youth Builders Mixer is an invite-only dinner for youth founders, builders, and early-stage entrepreneurs to slow down, meet each other, and have real conversations.​This isn’t a networking event. It’s a shared table for people building things, from student-led startups and creators to early founders across Singapore’s youth ecosystem. No pitches, no panels, just good food, board games, and honest conversations with people who are actually shipping.",
     link: "https://luma.com/5wg9q462",
     date: "8 Feb 2026",
-    location: "Monk's Brew Club, Singapore",    tag: "completed",  },
+    location: "Monk's Brew Club, Singapore",
+    tag: "completed" as const,
+  },
   {
     image: "/events/entrepreneurs-connect.jpg",
     title: "Entrepreners Connect",
@@ -61,7 +63,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/8rqm5tue",
     date: "26 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
-    tag: "upcoming",
+    tag: "upcoming" as const,
   },
   {
     image: "/events/creating-effective-teams.jpg",
@@ -71,7 +73,7 @@ const EVENTS: Event[] = [
     link: "https://luma.com/et8qvin9",
     date: "30 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
-    tag: "upcoming",
+    tag: "upcoming" as const,
   },
   {
     image: "/events/creating-effective-teams.jpg",
@@ -81,9 +83,9 @@ const EVENTS: Event[] = [
     link: "https://luma.com/bck4uh17",
     date: "7 April 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
-    tag: "upcoming",
+    tag: "upcoming" as const,
   },
-].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+].sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()) as Event[];
 
 export default function EventsPage() {
   return (
