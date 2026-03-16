@@ -18,8 +18,18 @@ const EVENTS: Event[] = [
       "Do you have a great idea, but somehow still feel stuck? At YeS that's exactly who these mixers are built for: young entrepreneurs across Singapore who are still pre-funding, pre-fame, but serious about their idea. YeS co-hosted this founder-only room (with our invite only community: The Collective) where founders could swap ideas, share struggles, and build connections with other ambitious people.",
     link: "https://www.linkedin.com/posts/shrujan-beesetty_do-you-have-a-great-idea-but-somehow-still-ugcPost-7405232419722870785-rmjL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUoomsBTNPyF7QOnjE-wjvRk1eQrzC8gus",
     date: "8 Jan 2026",
-    location: "Somewhere",
+    location: "Open Sourced Cafe, Singapore",
   },
+  {
+    image: "/events/student-founder-pitch-night.jpg",
+    title: "Student Founder Pitch Night",
+    description:
+      "An evening showcasing student-led and youth-led startups building in Singapore. ​Join us at BLOCK71 for a fast-paced pitch night featuring live startup pitches, candid feedback from experienced founders and investors, and relaxed networking with fellow builders.",
+    link: "https://luma.com/6kh14jwj",
+    date: "16 Jan 2026",
+    location: "BLOCK71, Singapore",
+  },
+  
 ];
 
 export default function EventsPage() {
