@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
     images: [{ url: "/yes-banner.jpg", 
-      width: 400,
-      height: 300,
+      width: 1280,
+      height: 541,
       alt: "Young Entrepreneurs of Singapore" }],
   },
   twitter: {
