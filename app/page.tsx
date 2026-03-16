@@ -14,7 +14,7 @@ const PARTNERS = [
 export function DontKnowWhereToStartStoryBoard() {
   return (
     <div className="w-full h-full min-h-svh bg-secondary flex flex-col items-center">
-      <div className="flex flex-col md:flex-row max-w-ui px-8 md:px-12 lg:px-16 pt-24 pb-12 w-full h-full">
+      <div className="flex flex-row not-landscape:flex-col not-landscape:lg:flex-row max-w-ui px-8 md:px-12 lg:px-16 pt-24 pb-12 w-full h-full">
         <div className="flex-1 h-full flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center">
           <div className="w-full xl:w-2/3 flex flex-col gap-2 lg:gap-4 xl:gap-6 2xl:gap-8 justify-center">
             <h2 className="storyboard-header font-bold text-left text-secondary-foreground">
@@ -104,7 +104,7 @@ export function DontKnowWhereToStartStoryBoard() {
 export function WhyYeSExistStoryBoard() {
   return (
     <div className="w-full h-full min-h-svh bg-primary flex flex-col items-center">
-      <div className="relative flex flex-col md:flex-row max-w-ui pt-16 px-8 md:px-12 lg:px-16 w-full h-full">
+      <div className="relative flex flex-row not-landscape:flex-col not-landscape:lg:flex-row max-w-ui pt-16 px-8 md:px-12 lg:px-16 w-full h-full">
         <div className="absolute -top-20 md:-top-1/5 left-0 w-full lg:w-2/3">
           <svg
             className="w-full h-full"
