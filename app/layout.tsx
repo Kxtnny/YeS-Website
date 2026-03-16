@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "YeS - Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
+    locale: "en_US",
     type: "website",
     images: [{ url: "/yes-logo.png", 
       width: 960,
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "YeS – Young Entrepreneurs of Singapore",
     description: "Young Entrepreneurs of Singapore",
-    images: ["/yes-logo.png"],
+    images: "/yes-logo.png",
   },
 };
 
