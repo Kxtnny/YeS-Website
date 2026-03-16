@@ -686,7 +686,7 @@ export function SparkCultureStoryBoard() {
         <div className="flex-2 flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8 justify-center items-center">
           <div className="w-full flex flex-col gap-2 lg:gap-4 xl:gap-6 2xl:gap-8 justify-center lg:items-center">
             <h2 className="storyboard-header font-bold text-primary-light-foreground max-w-2xl lg:text-center not-landscape:text-center">
-              Spark a cultural shift in Singapore
+              Shaping the Next Generation of Founders
             </h2>
             <p className="text-primary-light-foreground storyboard-subheader max-w-2xl lg:text-center not-landscape:text-center">
               We hope to spark a cultural shift in Singapore, and encourage the
@@ -880,11 +880,11 @@ function ReadyToKickOffStoryboard() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Join Us
+                  Join our community
                 </a>
               </button>
               <button className="w-28 md:w-40 lg:w-44 xl:w-48 bg-secondary text-secondary-foreground border-2 border-primary px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl">
-                <Link href="/">Partner Up!</Link>
+                <Link href="/">Partner with us</Link>
               </button>
             </div>
             {/* Without landscape */}
