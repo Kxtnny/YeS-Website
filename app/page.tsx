@@ -874,37 +874,41 @@ function ReadyToKickOffStoryboard() {
             </h2>
             {/* With landscape */}
             <div className="hidden landscape:flex flex-row items-center gap-2 lg:gap-4">
-              <button className="w-28 md:w-40 lg:w-44 xl:w-48 bg-background border-2 border-primary text-primary px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl">
-                <a
-                  href="https://tally.so/r/xXD8Dd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join our community
-                </a>
-              </button>
-              <button className="w-28 md:w-40 lg:w-44 xl:w-48 bg-secondary text-secondary-foreground border-2 border-primary px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl">
-                <a href="https://tally.so/r/9qlQWG" target="_blank" rel="noopener noreferrer">
-                  Partner with us
-                </a>
-              </button>
+              <a
+                href="https://tally.so/r/xXD8Dd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-28 md:w-40 lg:w-44 xl:w-48 bg-background border-2 border-primary text-center text-primary px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl inline-flex items-center justify-center"
+              >
+                Join our community
+              </a>
+              <a
+                href="https://tally.so/r/9qlQWG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-28 md:w-40 lg:w-44 xl:w-48 bg-secondary text-secondary-foreground border-2 border-primary text-center px-2.5 py-1.5 md:px-4 md:py-2.5 lg:px-8 lg:py-4 rounded-xl text-base md:text-lg lg:text-xl xl:text-2xl inline-flex items-center justify-center"
+              >
+                Partner with us
+              </a>
             </div>
             {/* Without landscape */}
             <div className="hidden not-landscape:flex flex-row items-center gap-4">
-              <button className="w-36 md:w-48 lg:w-56 bg-background border-2 border-primary text-primary px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl">
-                <a
-                  href="https://tally.so/r/xXD8Dd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join Us
-                </a>
-              </button>
-              <button className="w-36 md:w-48 lg:w-56 bg-secondary text-secondary-foreground px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl">
-                <a href="https://tally.so/r/9qlQWG" target="_blank" rel="noopener noreferrer">
-                  Partner Up!
-                </a>
-              </button>
+              <a
+                href="https://tally.so/r/xXD8Dd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-36 md:w-48 lg:w-56 bg-background border-2 border-primary text-primary px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl inline-flex items-center justify-center"
+              >
+                Join Us
+              </a>
+              <a
+                href="https://tally.so/r/9qlQWG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-36 md:w-48 lg:w-56 bg-secondary text-secondary-foreground px-4 py-2.5 md:px-8 md:py-4 rounded-xl text-lg md:text-xl lg:text-2xl inline-flex items-center justify-center"
+              >
+                Partner Up!
+              </a>
             </div>
           </div>
         </div>
@@ -1064,12 +1068,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-row items-center gap-4">
-              <button className="w-40 md:w-48 lg:w-56 bg-background border-2 border-primary text-primary px-8 py-4 rounded-xl text-xl md:text-2xl lg:text-3xl">
-                <Link href="/events">Events</Link>
-              </button>
-              <button className="w-40 md:w-48 lg:w-56 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-xl md:text-2xl lg:text-3xl">
-                <a href="#ready-to-kickoff">Join Now</a>
-              </button>
+              <Link href="/events" className="w-40 md:w-48 lg:w-56 bg-background border-2 border-primary text-primary px-8 py-4 rounded-xl text-xl md:text-2xl lg:text-3xl inline-flex items-center justify-center">
+                Events
+              </Link>
+              <a href="#ready-to-kickoff" className="w-40 md:w-48 lg:w-56 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-xl md:text-2xl lg:text-3xl inline-flex items-center justify-center">
+                Join Now
+              </a>
             </div>
           </div>
         </div>
