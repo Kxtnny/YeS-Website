@@ -79,6 +79,16 @@ const EVENTS = [
     tag: "upcoming" as const,
   },
   {
+    image: "/events/agentcon-ntu.jpg",
+    title: "AgentCon @ NTU｜OpenClaw OPC Connect",
+    description:
+      "A hands-on AI × Web3 event focused on building on-chain agents. Whether you're just getting started or already building, this is a space to explore, experiment, and connect. What you can do: Learn from talks on AI agents, OpenClaw, and real-world use cases, Build on-site with support from Tencent Cloud engineers, Share your ideas, demos, or interesting agent use cases.",
+    link: "https://luma.com/c9t9lx6f",
+    date: "31 March 2026",
+    location: "NTU Wee Cho Yaw Plaza South Academic Building, ​Level 3, ABS-03-018",
+    tag: "upcoming" as const,
+  },
+  {
     image: "/events/creating-effective-teams.jpg",
     title: "Monetizing Research: From Lab to Market",
     description:
