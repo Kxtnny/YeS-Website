@@ -92,4 +92,14 @@ export const EVENTS: Event[] = [
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
     tag: "upcoming",
   },
+  {
+   image: "/events/straight-up.jpg",
+   title: "strAIght up! Hackathon 2026",
+   description:
+   "​1 week. From idea to demo. Build with AI. ​strAIght up! Hackathon is a hybrid AI hackathon bringing together young builders aged 15 to 25 to explore, experiment, and ship real products using AI. ​Participants form teams of 2 to 4 and build usable projects from scratch over a week supported by an initiation day on 18th April at LorongAI with workshops, mentors and industry partners. Teams then work on their projects remotely until 25th April, where the judging will be held at LorongAI. ​Teams will be guided by prize categories that will be revealed on 18th April, in person!",
+   link: "https://luma.com/6cs42n17",
+   date: "18 April 2026",
+   location: "LorongAI @ One-North, Singapore",
+   tag: "upcoming",
+  }
 ];
