@@ -60,7 +60,7 @@ export const EVENTS: Event[] = [
     link: "https://luma.com/8rqm5tue",
     date: "26 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
-    tag: "upcoming",
+    tag: "completed",
   },
   {
     image: "/events/creating-effective-teams.jpg",
@@ -70,7 +70,7 @@ export const EVENTS: Event[] = [
     link: "https://luma.com/et8qvin9",
     date: "30 March 2026",
     location: "NTU Innovation Port at Wee Cho Yaw Plaza",
-    tag: "upcoming",
+    tag: "completed",
   },
   {
     image: "/events/agentcon-ntu.jpg",
@@ -80,7 +80,7 @@ export const EVENTS: Event[] = [
     link: "https://luma.com/c9t9lx6f",
     date: "31 March 2026",
     location: "NTU Wee Cho Yaw Plaza South Academic Building, ​Level 3, ABS-03-018",
-    tag: "upcoming",
+    tag: "completed",
   },
   {
     image: "/events/creating-effective-teams.jpg",
