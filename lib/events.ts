@@ -78,6 +78,6 @@ export const ADDITIONAL_PAST_EVENTS: PastEvent[] = [
     title: "Founder's Pitch Night",
     date: "",
     image: "/images/events/founders-pitch-night.jpg",
-    description: "",
+    description: "We brought together 150+ builders to observe as 10 founders pitch their ideas to venture capitalists and receive live feedback.",
   },
 ];
