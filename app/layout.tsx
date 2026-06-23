@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
-
-const siteUrl = "https://joinyes.net";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,28 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "YeS",
-  description: "Young Entrepreneurs of Singapore",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    title: "YeS - Young Entrepreneurs of Singapore",
-    description: "Young Entrepreneurs of Singapore",
-    locale: "en_US",
-    type: "website",
-    images: [{ url: "/yes-banner.png", 
-      width: 1200,
-      height: 630,
-      alt: "Young Entrepreneurs of Singapore" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "YeS – Young Entrepreneurs of Singapore",
-    description: "Young Entrepreneurs of Singapore",
-    images: "/yes-banner.png",
-  },
+  title: "YeS — Young Entrepreneurs of Singapore",
+  description:
+    "Singapore's fastest-growing youth founder ecosystem. Turn your raw idea into a market-ready reality.",
 };
 
 export default function RootLayout({
@@ -46,12 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="flex min-h-screen flex-col bg-white antialiased">
         <Header />
-        {children}
+        <div className="flex flex-1 flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );
