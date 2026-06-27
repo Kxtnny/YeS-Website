@@ -16,19 +16,6 @@ export function CtaSection({ className }: CtaSectionProps) {
       aria-labelledby="cta-heading"
       className={cn("relative w-full overflow-hidden bg-white pb-16 md:pb-24", className)}
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_0%,rgba(171,46,46,0.14),transparent_68%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_15%,rgba(171,46,46,0.08),transparent_55%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_30%,rgba(171,46,46,0.12),transparent_50%)]"
-      />
-
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 pt-4 text-center sm:gap-10 sm:pt-6 md:px-12">
         <div className="flex max-w-2xl flex-col gap-4">
           <h2
