@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
+import { ShinyText } from "@/components/ui/shiny-text";
 import { LUMA_EVENTS_URL } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
@@ -112,7 +113,7 @@ export function HeroSection({ className }: HeroSectionProps) {
                 <span className="block">Turn your wild ideas into</span>
               </RevealLine>
               <RevealLine delay={VENTURES_DELAY} duration={VENTURES_DURATION}>
-                <span className="block font-semibold text-primary">ventures</span>
+                <ShinyText className="inline-block font-semibold">ventures</ShinyText>
               </RevealLine>
             </h1>
 

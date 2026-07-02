@@ -35,9 +35,8 @@ export function ImpactSection({
         <h2
           id="impact-heading"
           className={cn(
-            "mx-auto max-w-4xl text-center text-4xl sm:text-5xl md:text-[3.25rem] md:leading-[1.08]",
-            IMPACT_HEADING_TYPO,
-            IMPACT_TEXT_ACCENT
+            "mx-auto max-w-4xl text-center text-4xl sm:text-5xl md:text-[3.25rem] md:leading-[1.08] text-neutral-950",
+            IMPACT_HEADING_TYPO
           )}
         >
           The Hub for Singapore&apos;s Youth Founders
