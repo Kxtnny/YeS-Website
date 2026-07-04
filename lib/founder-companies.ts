@@ -124,4 +124,72 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
       },
     ],
   },
+  {
+    id: "roadaids",
+    name: "Roadaids",
+    tagline: "Just had an accident?",
+    description:
+      "We help drivers decide what to do after a car accident: review private settlement demands, check repair quotes, and organise claim evidence before responding.",
+    website: "https://www.roadaids.com/",
+    team: [
+      {
+        id: "jex-lin",
+        name: "Jex Lin",
+        image: "/images/founders/jex-lin.png",
+        linkedin: "https://www.linkedin.com/in/jex-lin/",
+      },
+    ],
+  },
+  {
+    id: "remester",
+    name: "Remester",
+    tagline: "Finding the best university for you",
+    description:
+      "We empower students with quantitative intelligence to choose their university with confidence and clarity.",
+    bannerImage: "/images/founders/banners/remester.png",
+    website: "https://remester.com/",
+    team: [
+      {
+        id: "rian-mathew-george",
+        name: "Rian Mathew George",
+        image: "/images/founders/rian-mathew-george.png",
+        linkedin: "https://www.linkedin.com/in/rian-mathew-george/",
+      },
+    ],
+  },
+  {
+    id: "carboncredible",
+    name: "CarbonCredible",
+    tagline: "Making carbon projects trustworthy",
+    description:
+      "AI-powered feasibility analysis for carbon projects using local knowledge and satellite data.",
+    bannerImage: "/images/founders/banners/carboncredible.png",
+    website: "https://v0-carbon-credible-design.vercel.app/",
+    team: [
+      {
+        id: "anirudh-mannattil",
+        name: "Anirudh Mannattil",
+        image: "/images/founders/anirudh-mannattil.png",
+        linkedin: "https://www.linkedin.com/in/anirudh-mannattil/",
+      },
+      {
+        id: "aashka-shah",
+        name: "Aashka Shah",
+        image: "/images/founders/aashka-shah.png",
+        linkedin: "https://www.linkedin.com/in/aashka-shah-702b42344/",
+      },
+      {
+        id: "aurelia-e",
+        name: "Aurelia E.",
+        image: "/images/founders/aurelia-e.png",
+        linkedin: "https://www.linkedin.com/in/aurelia-emily/",
+      },
+      {
+        id: "madhulika-p",
+        name: "Madhulika P",
+        image: "/images/founders/madhulika-p.png",
+        linkedin: "https://www.linkedin.com/in/madhulikapalanivelu/",
+      },
+    ],
+  },
 ];

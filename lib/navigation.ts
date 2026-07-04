@@ -17,6 +17,11 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     description: "",
   },
   {
+    title: "Opportunities",
+    href: "/opportunities",
+    description: "",
+  },
+  {
     title: "Community",
     description:
       "Meet the people building Singapore's next generation of ventures.",
