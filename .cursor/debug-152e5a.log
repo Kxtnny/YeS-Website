@@ -1,0 +1,3 @@
+{"sessionId":"152e5a","hypothesisId":"A","location":"DesktopNav.tsx:module","message":"DesktopNav chunk executed (lazy import resolved)","data":{"t":113.89999985694885},"timestamp":1783074239965}
+{"sessionId":"152e5a","hypothesisId":"B","location":"MobileMenu.tsx:module","message":"MobileMenu chunk executed","data":{"t":120.20000004768372},"timestamp":1783074239971}
+{"sessionId":"152e5a","hypothesisId":"A","location":"MobileMenu.tsx:mount","message":"MobileMenu hydrated/mounted (effects running)","data":{"t":125.70000004768372},"timestamp":1783074239976}

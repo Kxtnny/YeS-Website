@@ -13,6 +13,7 @@ import {
   FOUNDER_COMPANIES,
   type FounderCompany,
 } from "@/lib/founder-companies";
+import { companyHasOpportunities } from "@/lib/opportunities";
 import { cn } from "@/lib/utils";
 
 const REVEAL_EASE = [0.22, 1, 0.36, 1] as const;
@@ -120,10 +121,20 @@ function CompanyCard({ company }: { company: FounderCompany }) {
                   {company.name}
                 </h2>
               )}
-              <p className="mt-1 text-sm font-medium text-primary">
-                {company.tagline}
-              </p>
+              {company.tagline ? (
+                <p className="mt-1 text-sm font-medium text-primary">
+                  {company.tagline}
+                </p>
+              ) : null}
             </div>
+            {companyHasOpportunities(company.id) ? (
+              <Link
+                href={`/opportunities?company=${company.id}`}
+                className="shrink-0 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/15"
+              >
+                Hiring
+              </Link>
+            ) : null}
           </div>
 
           <p className="text-sm leading-relaxed text-neutral-500">
