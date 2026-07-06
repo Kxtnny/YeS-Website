@@ -203,7 +203,7 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
   {
     id: "gwenth",
     name: "Gwenth",
-    tagline: "Gwenth automates lead generation",
+    tagline: "Gwenth automates your GTM and sales",
     description:
       "Gwenth finds high-intent buyers 24/7, automates personalized connection on channels like LinkedIn, email, and WhatsApp, and helps you manage client relationships from first signal to post-sales.",
     bannerImage: "/images/founders/banners/gwenth.png",
