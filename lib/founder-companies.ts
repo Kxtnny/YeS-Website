@@ -5,7 +5,6 @@ export interface FounderTeamMember {
   image: string;
   bio?: string;
   linkedin?: string;
-  instagram?: string;
 }
 
 export interface FounderCompany {
@@ -32,18 +31,21 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         name: "Benedict Tan",
         image: "/images/founders/benedict-tan.png",
         bio: "hey, we're building something cool at opgenic.com",
+        linkedin: "https://www.linkedin.com/in/benedict-tan-265403215/",
       },
       {
         id: "asish-moturu",
         name: "Asish Moturu",
         image: "/images/founders/asish-moturu.png",
         bio: "hey, we're building something cool at opgenic.com",
+        linkedin: "https://www.linkedin.com/in/asish-moturu/",
       },
       {
         id: "cheryl-wong",
         name: "Cheryl Wong",
         image: "/images/founders/cheryl-wong.png",
         bio: "hey, we're building something cool at opgenic.com",
+        linkedin: "https://www.linkedin.com/in/cheryl-wong-872a69332/",
       },
     ],
   },
@@ -58,16 +60,19 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         id: "haotian-lawrence-tang",
         name: "Haotian (Lawrence) Tang",
         image: "/images/founders/haotian-lawrence-tang.png",
+        linkedin: "https://www.linkedin.com/in/haotiantang-lawrence/",
       },
       {
         id: "adrin-manohar",
         name: "Adrin Manohar",
         image: "/images/founders/adrin-manohar.png",
+        linkedin: "https://www.linkedin.com/in/adrinmanohar/",
       },
       {
         id: "samarth-bhatia",
         name: "Samarth Bhatia",
         image: "/images/founders/samarth-bhatia.png",
+        linkedin: "https://www.linkedin.com/in/samarth-bhatia-03-/",
       },
     ],
   },
@@ -84,6 +89,7 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         id: "palaash-jadav",
         name: "Palaash Jadav",
         image: "/images/founders/palaash-jadav.png",
+        linkedin: "https://www.linkedin.com/in/palaash-jadav/",
       },
     ],
   },
@@ -99,11 +105,13 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         id: "ho-jun-xi",
         name: "Ho Jun Xi",
         image: "/images/founders/ho-jun-xi.png",
+        linkedin: "https://www.linkedin.com/in/ho-jun-xi/",
       },
       {
         id: "yue-min",
         name: "Yue Min",
         image: "/images/founders/yue-min.png",
+        linkedin: "https://www.linkedin.com/in/lim-yue-min/",
       },
     ],
   },
@@ -189,6 +197,23 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         name: "Madhulika P",
         image: "/images/founders/madhulika-p.png",
         linkedin: "https://www.linkedin.com/in/madhulikapalanivelu/",
+      },
+    ],
+  },
+  {
+    id: "gwenth",
+    name: "Gwenth",
+    tagline: "Gwenth automates lead generation",
+    description:
+      "Gwenth finds high-intent buyers 24/7, automates personalized connection on channels like LinkedIn, email, and WhatsApp, and helps you manage client relationships from first signal to post-sales.",
+    bannerImage: "/images/founders/banners/gwenth.png",
+    website: "https://www.gwenth.com/",
+    team: [
+      {
+        id: "jacye-lye-jia-jun",
+        name: "Jacye Lye Jia Jun",
+        image: "/images/founders/jacye-lye-jia-jun.png",
+        linkedin: "https://www.linkedin.com/in/lyejiajun/",
       },
     ],
   },
