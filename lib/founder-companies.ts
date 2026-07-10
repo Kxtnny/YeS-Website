@@ -54,6 +54,7 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
     name: "Money Pasar",
     tagline: "Borderless finance infrastructure for SMEs.",
     description: "A better way to move money across borders.",
+    bannerImage: "/images/founders/banners/money-pasar.png",
     website: "https://moneypasar.com/",
     team: [
       {
