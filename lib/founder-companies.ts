@@ -245,4 +245,39 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
       },
     ],
   },
+  {
+    id: "forge",
+    name: "Forge",
+    tagline: "The Best SHL and Aon Cognitive Assessment Practice Platform",
+    description:
+      "Building accessible SHL and Aon assessment practice tools that help students prepare confidently and get their dream interviews.",
+    bannerImage: "/images/founders/banners/forge.png",
+    website: "https://www.forgeprep.io/",
+    team: [
+      {
+        id: "pratham-ranjan",
+        name: "Pratham Ranjan",
+        image: "/images/founders/pratham-ranjan.png",
+        linkedin: "https://www.linkedin.com/in/pratham-ranjan27/",
+      },
+      {
+        id: "aditya-anand-pramod",
+        name: "Aditya Anand Pramod",
+        image: "/images/founders/aditya-anand-pramod.png",
+        linkedin: "https://www.linkedin.com/in/aditya-anand-pramod/",
+      },
+      {
+        id: "amitbikram-jain",
+        name: "Amitbikram Jain",
+        image: "/images/founders/amitbikram-jain.png",
+        linkedin: "https://www.linkedin.com/in/amitbikram-jain/",
+      },
+      {
+        id: "alok-vernekar",
+        name: "Alok Vernekar",
+        image: "/images/founders/alok-vernekar.png",
+        linkedin: "https://www.linkedin.com/in/alokvernekar/",
+      },
+    ],
+  },
 ];
