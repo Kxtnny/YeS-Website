@@ -217,4 +217,32 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
       },
     ],
   },
+  {
+    id: "waste-fellows",
+    name: "Waste Fellows",
+    tagline: "Where no waste goes to waste.",
+    description: "We help F&B businesses convert food waste into fertilizer.",
+    bannerImage: "/images/founders/banners/waste-fellows.png",
+    website: "https://www.linkedin.com/company/waste-fellows-sg/",
+    team: [
+      {
+        id: "santusht-narula",
+        name: "Santusht Narula",
+        image: "/images/founders/santusht-narula.png",
+        linkedin: "https://www.linkedin.com/in/santushtnarula/",
+      },
+      {
+        id: "rao-aryan-niranjan",
+        name: "Rao Aryan Niranjan",
+        image: "/images/founders/rao-aryan-niranjan.png",
+        linkedin: "https://www.linkedin.com/in/rao-aryan-niranjan-322b95280/",
+      },
+      {
+        id: "adharsh-srinivasan",
+        name: "Adharsh Srinivasan",
+        image: "/images/founders/adharsh-srinivasan.png",
+        linkedin: "https://www.linkedin.com/in/adharsh-srinivasan-2aa28a211/",
+      },
+    ],
+  },
 ];
