@@ -5,6 +5,7 @@ export interface FounderTeamMember {
   image: string;
   bio?: string;
   linkedin?: string;
+  instagram?: string;
 }
 
 export interface FounderCompany {
@@ -278,6 +279,31 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         name: "Alok Vernekar",
         image: "/images/founders/alok-vernekar.png",
         linkedin: "https://www.linkedin.com/in/alokvernekar/",
+      },
+    ],
+  },
+  {
+    id: "examon-ai",
+    name: "Examon AI",
+    tagline: "The fastest path to acing your exams",
+    description:
+      "We're building the world's largest IB question bank, so we can find every gap in your learning and fix it with the exact question you need.",
+    bannerImage: "/images/founders/banners/examon-ai.png",
+    website: "https://www.examon.ai/",
+    team: [
+      {
+        id: "antoine-lee",
+        name: "Antoine Lee",
+        image: "/images/founders/antoine-lee.png",
+        linkedin: "https://www.linkedin.com/in/antoinekllee/",
+        instagram: "https://www.instagram.com/aantoinelee/",
+      },
+      {
+        id: "alexandre-lee",
+        name: "Alexandre Lee",
+        image: "/images/founders/alexandre-lee.png",
+        linkedin: "https://www.linkedin.com/in/alexandre-lee-a91210231/",
+        instagram: "https://www.instagram.com/aalexandre.lee/",
       },
     ],
   },
