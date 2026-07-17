@@ -2,7 +2,7 @@ export interface FounderTeamMember {
   id: string;
   name: string;
   role?: string;
-  image: string;
+  image?: string;
   bio?: string;
   linkedin?: string;
   instagram?: string;
@@ -304,6 +304,27 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         image: "/images/founders/alexandre-lee.png",
         linkedin: "https://www.linkedin.com/in/alexandre-lee-a91210231/",
         instagram: "https://www.instagram.com/aalexandre.lee/",
+      },
+    ],
+  },
+  {
+    id: "siftplace",
+    name: "SiftPlace",
+    tagline: "Act Fast, Think Fast, Book Fast.",
+    description: "A fast, reliable way to find housing abroad.",
+    bannerImage: "/images/founders/banners/siftplace.png",
+    website: "https://sift-place.vercel.app/",
+    team: [
+      {
+        id: "dayang-shen",
+        name: "Dayang Shen",
+        image: "/images/founders/dayang-shen.png",
+        linkedin: "https://www.linkedin.com/in/dayangshen75/",
+      },
+      {
+        id: "loo-le-l",
+        name: "Loo Le L.",
+        linkedin: "https://www.linkedin.com/in/leelooile/",
       },
     ],
   },

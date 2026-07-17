@@ -100,7 +100,9 @@ function MemberDialog({ member, onClose }: MemberDialogProps) {
 
         <div className="flex items-start gap-4">
           <Avatar className="size-16 shrink-0 ring-1 ring-neutral-200">
-            <AvatarImage src={member.image} alt={member.name} />
+            {member.image ? (
+              <AvatarImage src={member.image} alt={member.name} />
+            ) : null}
             <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
           </Avatar>
 
@@ -182,7 +184,9 @@ export function TeamAvatarGroup({
                   className="rounded-full transition-transform hover:z-10 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                 >
                   <Avatar className="size-10 border-2 border-white ring-1 ring-neutral-200">
-                    <AvatarImage src={member.image} alt={member.name} />
+                    {member.image ? (
+                      <AvatarImage src={member.image} alt={member.name} />
+                    ) : null}
                     <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
                   </Avatar>
                 </button>
