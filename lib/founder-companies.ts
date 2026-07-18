@@ -12,7 +12,7 @@ export interface FounderCompany {
   id: string;
   name: string;
   tagline: string;
-  description: string;
+  description?: string;
   bannerImage?: string;
   website?: string;
   team: FounderTeamMember[];
@@ -325,6 +325,21 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         id: "loo-le-l",
         name: "Loo Le L.",
         linkedin: "https://www.linkedin.com/in/leelooile/",
+      },
+    ],
+  },
+  {
+    id: "s-up",
+    name: "s'up",
+    tagline: "The AI Coach to build better spine habits",
+    bannerImage: "/images/founders/banners/s-up.png",
+    website: "https://www.s-up.app/",
+    team: [
+      {
+        id: "leipakshi-gupta",
+        name: "Leipakshi Gupta",
+        image: "/images/founders/leipakshi-gupta.png",
+        linkedin: "https://www.linkedin.com/in/leipakshi-gupta/",
       },
     ],
   },

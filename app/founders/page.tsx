@@ -137,9 +137,11 @@ function CompanyCard({ company }: { company: FounderCompany }) {
             ) : null}
           </div>
 
-          <p className="text-sm leading-relaxed text-neutral-500">
-            {company.description}
-          </p>
+          {company.description ? (
+            <p className="text-sm leading-relaxed text-neutral-500">
+              {company.description}
+            </p>
+          ) : null}
         </div>
 
         <div className="flex flex-col gap-2 border-t border-neutral-200 pt-5">
