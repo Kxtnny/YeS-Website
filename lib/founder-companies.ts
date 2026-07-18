@@ -174,7 +174,7 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
     description:
       "AI-powered feasibility analysis for carbon projects using local knowledge and satellite data.",
     bannerImage: "/images/founders/banners/carboncredible.png",
-    website: "https://v0-carbon-credible-design.vercel.app/",
+    website: "https://carbon-credible.vercel.app/",
     team: [
       {
         id: "anirudh-mannattil",
