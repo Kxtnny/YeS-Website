@@ -215,7 +215,7 @@ export function MomentumTimeline() {
 
       <div className="hidden md:block">
         <div className="overflow-x-auto pb-3">
-          <div className="mx-auto w-max">
+          <div className="mx-auto flex w-max min-w-full justify-center">
             <TimelineContent prefersReducedMotion={prefersReducedMotion} />
           </div>
         </div>
