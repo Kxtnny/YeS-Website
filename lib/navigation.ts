@@ -33,6 +33,6 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   {
     title: "Programs",
     description: "Structured support to help you go from idea to launch.",
-    items: [{ title: "Incubator", href: "/programs/incubator" }],
+    items: [{ title: "Momentum", href: "/programs/incubator" }],
   },
 ];

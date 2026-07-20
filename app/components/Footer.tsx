@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import type { ReactNode } from "react";
+
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/links";
 
 interface SocialLink {
   label: string;
@@ -52,7 +55,15 @@ const SOCIAL_LINKS: SocialLink[] = [
 export default function Footer() {
   return (
     <footer className="w-full bg-primary">
-      <div className="mx-auto flex max-w-ui items-center justify-end px-6 py-6 md:px-12">
+      <div className="mx-auto flex max-w-ui items-center justify-between gap-4 px-6 py-6 md:px-12">
+        <a
+          href={CONTACT_MAILTO}
+          className="inline-flex items-center gap-2 text-sm font-medium text-white/90 transition-colors hover:text-white"
+        >
+          <Mail className="size-4 shrink-0" aria-hidden="true" />
+          {CONTACT_EMAIL}
+        </a>
+
         <nav aria-label="Social media">
           <ul className="flex items-center gap-4">
             {SOCIAL_LINKS.map((link) => (
