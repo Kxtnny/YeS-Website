@@ -343,4 +343,20 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
       },
     ],
   },
+  {
+    id: "caru",
+    name: "Caru",
+    tagline: "Distance doesn't have to mean doubt",
+    description:
+      "Caru automates daily check-in calls and gives your whole family one shared, real-time view of your parent's wellbeing. Open the app anytime, on your own schedule, instead of piecing it together from scattered calls.",
+    bannerImage: "/images/founders/banners/caru.jpg",
+    team: [
+      {
+        id: "avyukta-chekuri",
+        name: "Avyukta Chekuri",
+        image: "/images/founders/avyukta-chekuri.jpg",
+        linkedin: "https://www.linkedin.com/in/avyukta-chekuri-42747821b/",
+      },
+    ],
+  },
 ];
