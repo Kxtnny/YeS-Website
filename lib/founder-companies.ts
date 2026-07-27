@@ -6,6 +6,8 @@ export interface FounderTeamMember {
   bio?: string;
   linkedin?: string;
   instagram?: string;
+  /** When true, member is kept in data but not shown in the UI */
+  hidden?: boolean;
 }
 
 export interface FounderCompany {
@@ -98,9 +100,10 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
   {
     id: "jm-atelier",
     name: "JM Atelier",
-    tagline: "Helping you start your own business",
+    tagline: "Bespoke corporate services for founders & SMEs.",
     description:
-      "We provide the corporate strategy to help you scale your vision.",
+      "Incorporation, corp-sec, accounting and tax — handled properly, end-to-end, so you can focus on building.",
+    bannerImage: "/images/founders/banners/jm-atelier.jpg",
     website: "https://www.jmatelier.co/",
     team: [
       {
@@ -114,6 +117,7 @@ export const FOUNDER_COMPANIES: FounderCompany[] = [
         name: "Yue Min",
         image: "/images/founders/yue-min.png",
         linkedin: "https://www.linkedin.com/in/lim-yue-min/",
+        hidden: true,
       },
     ],
   },

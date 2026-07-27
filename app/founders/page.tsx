@@ -151,7 +151,9 @@ function CompanyCard({ company }: { company: FounderCompany }) {
           <p className="text-xs text-neutral-400 sm:hidden">
             Tap a face to learn more about them
           </p>
-          <TeamAvatarGroup members={company.team} />
+          <TeamAvatarGroup
+            members={company.team.filter((member) => !member.hidden)}
+          />
         </div>
       </div>
     </article>
