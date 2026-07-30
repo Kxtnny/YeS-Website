@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { useRef } from "react";
 
 const ACCEL_EASE = [0.75, 0, 0.95, 0.25] as const;
 const FADE_EASE = [0.22, 1, 0.36, 1] as const;
@@ -65,8 +59,47 @@ const LINES_END =
 
 const REVEAL_START = LINES_END;
 const REVEAL_DURATION = 1.15;
-/** Momentum appears as the red circle starts opening out */
 const MOMENTUM_FADE_DELAY = REVEAL_START + REVEAL_DURATION * 0.58;
+const DESCRIPTION_FADE_DELAY = MOMENTUM_FADE_DELAY + 0.55;
+const LINE_DRAW_DELAY = DESCRIPTION_FADE_DELAY + 0.55;
+
+function ProgramDescription({
+  animateLine = false,
+  lineDelay = 0,
+}: {
+  animateLine?: boolean;
+  lineDelay?: number;
+}) {
+  return (
+    <p className="max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg">
+      Momentum is a four month incubator program designed for ambitious
+      early-stage founders to validate their problem space, build products that
+      customers want, and{" "}
+      <span className="relative inline-block font-semibold text-neutral-700">
+        launch with confidence
+        {animateLine ? (
+          <motion.span
+            aria-hidden="true"
+            className="absolute -bottom-1 left-0 h-[0.2rem] w-full origin-left rounded-full bg-primary"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{
+              delay: lineDelay,
+              duration: 0.65,
+              ease: FADE_EASE,
+            }}
+          />
+        ) : (
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-1 left-0 h-[0.2rem] w-full rounded-full bg-primary"
+          />
+        )}
+      </span>
+      .
+    </p>
+  );
+}
 
 function WarpLines() {
   return (
@@ -125,30 +158,7 @@ function CircularReveal() {
 }
 
 export function MomentumHero() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion() ?? false;
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
-  const brandScale = useTransform(scrollYProgress, [0, 0.55], [1, 0.42]);
-  const brandY = useTransform(scrollYProgress, [0, 0.55], [56, 0]);
-  const brandColor = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.55],
-    ["rgb(10 10 10)", "rgb(64 64 64)", "rgb(163 163 163)"]
-  );
-
-  const detailOpacity = useTransform(scrollYProgress, [0.3, 0.55], [0, 1]);
-  const detailY = useTransform(scrollYProgress, [0.3, 0.55], [36, 0]);
-
-  const scrollHintOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.12, 0.3],
-    [1, 0.6, 0]
-  );
 
   if (prefersReducedMotion) {
     return (
@@ -162,26 +172,13 @@ export function MomentumHero() {
         >
           <h1
             id="momentum-heading"
-            className="mb-4 text-3xl font-semibold tracking-tight text-neutral-400 sm:text-4xl"
+            className="text-6xl font-semibold leading-none tracking-[-0.04em] text-neutral-950 sm:text-7xl md:text-8xl lg:text-[8.5rem]"
           >
             Momentum
           </h1>
-          <p className="text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.03em] text-neutral-950 sm:text-5xl md:text-6xl lg:text-[3.75rem]">
-            Validate. Build. <span className="text-primary">Launch.</span>
-          </p>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg">
-            Momentum is a four month incubator program designed for ambitious
-            early-stage founders to validate their problem space, build products
-            that customers want, and{" "}
-            <span className="relative inline-block font-semibold text-neutral-700">
-              launch with confidence
-              <span
-                aria-hidden="true"
-                className="absolute -bottom-1 left-0 h-[0.2rem] w-full rounded-full bg-primary"
-              />
-            </span>
-            .
-          </p>
+          <div className="mt-6 sm:mt-8">
+            <ProgramDescription />
+          </div>
         </section>
         <div className="relative flex justify-center pb-8">
           <a
@@ -197,85 +194,68 @@ export function MomentumHero() {
   }
 
   return (
-    <div ref={sectionRef} className="relative h-[180vh] bg-white">
-      <div className="sticky top-20 flex h-[calc(100svh-5rem)] flex-col overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-        >
-          <WarpLines />
-        </div>
-
-        <CircularReveal />
-
-        <section
-          aria-labelledby="momentum-heading"
-          className="relative z-10 mx-auto flex w-full max-w-ui flex-1 flex-col items-center justify-center px-6 text-center md:px-12"
-        >
-          <div className="relative flex w-full flex-col items-center">
-            <motion.h1
-              id="momentum-heading"
-              className="origin-bottom text-6xl font-semibold leading-none tracking-[-0.04em] sm:text-7xl md:text-8xl lg:text-[8.5rem]"
-              style={{
-                scale: brandScale,
-                y: brandY,
-                color: brandColor,
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.9,
-                delay: MOMENTUM_FADE_DELAY,
-                ease: FADE_EASE,
-              }}
-            >
-              Momentum
-            </motion.h1>
-
-            <motion.div
-              className="mt-3 flex max-w-2xl flex-col items-center sm:mt-4"
-              style={{ opacity: detailOpacity, y: detailY }}
-            >
-              <p className="text-[2.25rem] font-semibold leading-[1.05] tracking-[-0.03em] text-neutral-950 sm:text-4xl md:text-5xl lg:text-[3.5rem]">
-                Validate. Build.{" "}
-                <span className="text-primary">Launch.</span>
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-neutral-500 sm:text-lg">
-                Momentum is a four month incubator program designed for
-                ambitious early-stage founders to validate their problem space,
-                build products that customers want, and{" "}
-                <span className="relative inline-block font-semibold text-neutral-700">
-                  launch with confidence
-                  <span
-                    aria-hidden="true"
-                    className="absolute -bottom-1 left-0 h-[0.2rem] w-full rounded-full bg-primary"
-                  />
-                </span>
-                .
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        <motion.div
-          className="relative z-10 flex justify-center pb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: MOMENTUM_FADE_DELAY + 0.85,
-            duration: 0.6,
-            ease: FADE_EASE,
-          }}
-        >
-          <motion.span
-            aria-hidden="true"
-            className="flex size-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-500 shadow-sm"
-            style={{ opacity: scrollHintOpacity }}
-          >
-            <ChevronDown className="size-5" />
-          </motion.span>
-        </motion.div>
+    <div className="relative flex min-h-[calc(100svh-5rem)] w-full flex-col overflow-hidden bg-white">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <WarpLines />
       </div>
+
+      <CircularReveal />
+
+      <section
+        aria-labelledby="momentum-heading"
+        className="relative z-10 mx-auto flex w-full max-w-ui flex-1 flex-col items-center justify-center px-6 py-16 text-center md:px-12"
+      >
+        <div className="flex w-full flex-col items-center">
+          <motion.h1
+            id="momentum-heading"
+            className="text-6xl font-semibold leading-none tracking-[-0.04em] text-neutral-950 sm:text-7xl md:text-8xl lg:text-[8.5rem]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: MOMENTUM_FADE_DELAY,
+              ease: FADE_EASE,
+            }}
+          >
+            Momentum
+          </motion.h1>
+
+          <motion.div
+            className="mt-6 sm:mt-8"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.75,
+              delay: DESCRIPTION_FADE_DELAY,
+              ease: FADE_EASE,
+            }}
+          >
+            <ProgramDescription animateLine lineDelay={LINE_DRAW_DELAY} />
+          </motion.div>
+        </div>
+      </section>
+
+      <motion.div
+        className="relative z-10 flex justify-center pb-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: LINE_DRAW_DELAY + 0.35,
+          duration: 0.6,
+          ease: FADE_EASE,
+        }}
+      >
+        <a
+          href="#program-timeline"
+          aria-label="Scroll to program timeline"
+          className="flex size-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-500 shadow-sm transition-colors hover:border-neutral-300 hover:text-neutral-800"
+        >
+          <ChevronDown className="size-5" aria-hidden="true" />
+        </a>
+      </motion.div>
     </div>
   );
 }

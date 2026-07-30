@@ -7,10 +7,8 @@ import { Button } from "@/components/ui/button";
 import { MomentumHero } from "@/components/programs/momentum-hero-warp";
 import { MomentumTimeline } from "@/components/programs/momentum-timeline";
 import {
-  INCUBATOR_ORGANISERS,
-  INCUBATOR_PARTNERS,
+  INCUBATOR_ORGANISER_GROUPS,
   type IncubatorOrganiser,
-  type IncubatorPartner,
 } from "@/lib/incubator";
 import { CONTACT_MAILTO } from "@/lib/links";
 import { cn } from "@/lib/utils";
@@ -41,19 +39,32 @@ function SectionHeading({
   );
 }
 
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+    </svg>
+  );
+}
+
 function OrganiserCard({ organiser }: { organiser: IncubatorOrganiser }) {
   return (
-    <article className="flex flex-col items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-5 text-center shadow-sm shadow-neutral-200/50">
+    <article className="flex items-start gap-3.5">
       {organiser.image ? (
         <img
           src={organiser.image}
           alt={organiser.name}
-          className="size-20 rounded-full object-cover ring-1 ring-neutral-200"
+          className="size-14 shrink-0 rounded-full object-cover ring-1 ring-neutral-200 sm:size-16"
         />
       ) : (
         <div
           aria-hidden="true"
-          className="flex size-20 items-center justify-center rounded-full bg-neutral-100 text-sm font-semibold text-neutral-400 ring-1 ring-neutral-200"
+          className="flex size-14 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-sm font-semibold text-neutral-400 ring-1 ring-neutral-200 sm:size-16"
         >
           {organiser.name
             .split(" ")
@@ -63,60 +74,27 @@ function OrganiserCard({ organiser }: { organiser: IncubatorOrganiser }) {
             .join("")}
         </div>
       )}
-      <div className="flex flex-col gap-1">
-        <p className="text-sm font-semibold tracking-tight text-neutral-950">
-          {organiser.name}
-        </p>
-        <p className="text-sm font-medium text-primary">{organiser.title}</p>
-      </div>
-    </article>
-  );
-}
-
-function PartnerCard({ partner }: { partner: IncubatorPartner }) {
-  const content = (
-    <>
-      {partner.logo ? (
-        <img
-          src={partner.logo}
-          alt={`${partner.name} logo`}
-          className="h-10 w-auto object-contain"
-        />
-      ) : (
-        <div
-          aria-hidden="true"
-          className="flex h-12 w-full items-center justify-center rounded-lg bg-neutral-100 text-sm font-semibold text-neutral-400"
-        >
-          Logo
+      <div className="min-w-0 flex-1 pt-0.5">
+        <div className="flex items-center gap-1.5">
+          <p className="text-sm font-semibold tracking-tight text-neutral-950 sm:text-base">
+            {organiser.name}
+          </p>
+          {organiser.linkedin ? (
+            <a
+              href={organiser.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${organiser.name} on LinkedIn`}
+              className="shrink-0 text-[#0A66C2] transition-opacity hover:opacity-70"
+            >
+              <LinkedInIcon className="size-3.5" />
+            </a>
+          ) : null}
         </div>
-      )}
-      <div className="flex flex-col gap-1">
-        <h3 className="text-base font-semibold tracking-tight text-neutral-950">
-          {partner.name}
-        </h3>
-        <p className="text-sm leading-relaxed text-neutral-500">
-          {partner.description}
+        <p className="mt-0.5 text-sm leading-snug text-primary">
+          {organiser.title}
         </p>
       </div>
-    </>
-  );
-
-  if (partner.website) {
-    return (
-      <Link
-        href={partner.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm shadow-neutral-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10"
-      >
-        {content}
-      </Link>
-    );
-  }
-
-  return (
-    <article className="flex flex-col gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm shadow-neutral-200/50">
-      {content}
     </article>
   );
 }
@@ -152,27 +130,20 @@ export default function IncubatorPage() {
             title="Meet the organisers"
             description="The team running mentorship, curriculum, and community for this cohort."
           />
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-            {INCUBATOR_ORGANISERS.map((organiser) => (
-              <OrganiserCard key={organiser.id} organiser={organiser} />
+          <div className="flex flex-col gap-12 sm:gap-14">
+            {INCUBATOR_ORGANISER_GROUPS.map((group) => (
+              <div key={group.id}>
+                <h3 className="mb-6 text-xs font-semibold uppercase tracking-[0.14em] text-neutral-400">
+                  {group.title}
+                </h3>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8 lg:grid-cols-3">
+                  {group.organisers.map((organiser) => (
+                    <OrganiserCard key={organiser.id} organiser={organiser} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="partners-heading"
-        className="mx-auto w-full max-w-ui px-6 py-24 md:px-12 md:py-32"
-      >
-        <SectionHeading
-          id="partners-heading"
-          title="Partners"
-          description="Companies working with us to provide software, tools, and assistance for founders in the program."
-        />
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {INCUBATOR_PARTNERS.map((partner) => (
-            <PartnerCard key={partner.id} partner={partner} />
-          ))}
         </div>
       </section>
 
