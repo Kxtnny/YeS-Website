@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 export interface PartnersSectionProps {
   partners: Partner[];
   className?: string;
+  show?: boolean;
 }
 
 interface PartnerLogoProps {
@@ -51,7 +52,15 @@ function MarqueeTrack({ partners, ariaHidden = false }: MarqueeTrackProps) {
   );
 }
 
-export function PartnersSection({ partners, className }: PartnersSectionProps) {
+export function PartnersSection({
+  partners,
+  className,
+  show = true,
+}: PartnersSectionProps) {
+  if (!show) {
+    return null;
+  }
+
   return (
     <section
       id="partners"

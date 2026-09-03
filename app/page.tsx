@@ -13,6 +13,7 @@ export default function Home() {
         <PartnersSection
           partners={PARTNERS}
           className="shrink-0 border-t-0 py-8 md:py-9 lg:py-7"
+          show={false}
         />
       </div>
       <AboutUsSection />
